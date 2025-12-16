@@ -5,12 +5,12 @@ metadata:
   namespace: argocd
 spec:
   source:
-    repoURL: 'https://github.com/mrcpngn/gitops-repo'
-    targetRevision: 'main'
-    chart: charts/podinfo
+    repoURL: 'https://github.com/mrcpngn/gitops-repo.git'
+    targetRevision: main
+    path: charts/podinfo
     helm:
       valueFiles:
-        - env/podinfo/dev-values.yaml
+      - ../../env/podinfo/dev-values.yaml
   destination:
     namespace: dev
     server: 'https://kubernetes.default.svc'
