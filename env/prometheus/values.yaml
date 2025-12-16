@@ -1,0 +1,5 @@
+server:
+  persistentVolume:
+    enabled: true
+    mountPath: /data
+    size: 8Gi
