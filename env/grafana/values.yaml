@@ -15,3 +15,6 @@ datasources:
      url: http://prometheus-prometheus-server
      access: proxy
      isDefault: true
+
+initChownData:
+  enabled: false
