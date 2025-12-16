@@ -20,6 +20,7 @@ spec:
           ports:
             - containerPort: 9898
           env:
-            - name: METRICS_PORT
+            - name: PODINFO_PORT
               value: "9898"
-          args: ["--port=9898", "--enable-metrics"]
+            - name: METRICS_ENABLED
+              value: "true"
