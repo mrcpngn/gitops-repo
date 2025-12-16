@@ -1,0 +1,13 @@
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
+helmCharts:
+  - name: podinfo
+    repo: https://stefanprodan.github.io/podinfo
+    version: 6.6.3
+    releaseName: podinfo
+    namespace: dev
+    valuesInline:
+      metrics:
+        enabled: true
+      serviceMonitor:
+        enabled: true
